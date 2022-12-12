@@ -11,18 +11,26 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var label: UILabel!
-    
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.isHidden = true
+        slider.value = 1
+        
+//        label.isHidden = true
+        label.text = String(slider.value)
         label.font = label.font.withSize(35)
         label.textAlignment = .center
         label.numberOfLines = 3
         
         segmentedControl.insertSegment(withTitle: "Therd", at: 2, animated: true)
 
+        slider.minimumValue = 0
+        slider.maximumValue = 1
+        slider.minimumTrackTintColor = .green
+        slider.maximumTrackTintColor = .red
+        slider.thumbTintColor = .blue
         
     }
 
@@ -44,4 +52,12 @@ class SecondViewController: UIViewController {
             print("Error")
         }
     }
+    
+    @IBAction func sliderAction(_ sender: UISlider) {
+        label.text = String(sender.value)
+        
+        let backgroundColor = self.view.backgroundColor
+        self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+    }
+    
 }
