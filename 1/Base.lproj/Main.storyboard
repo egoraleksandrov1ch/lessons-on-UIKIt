@@ -139,8 +139,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. UISlider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOz-M8-a1A">
-                                <rect key="frame" x="135.33333333333334" y="361" width="122.33333333333334" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. UISlider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOz-M8-a1A">
+                                <rect key="frame" x="59" y="361" width="275" height="35"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -154,6 +154,30 @@
                                     <action selector="sliderAction:" destination="Gmz-To-vKy" eventType="valueChanged" id="BMC-Yf-Q44"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. UITextField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLR-Mh-S2N">
+                                <rect key="frame" x="115" y="516" width="163" height="35"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sXf-sC-Mfs">
+                                <rect key="frame" x="59" y="571" width="275" height="34"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0J-vn-tGh">
+                                <rect key="frame" x="59" y="625" width="275" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SB5-Z8-INt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="oBJ-Wp-aYN"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="Gmz-To-vKy" eventType="touchUpInside" id="8Zg-kA-lfP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="suK-FL-SIc"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -161,17 +185,26 @@
                             <constraint firstItem="BQL-R3-ybg" firstAttribute="centerX" secondItem="pDP-YN-klw" secondAttribute="centerX" id="2nT-D2-cDy"/>
                             <constraint firstItem="BQL-R3-ybg" firstAttribute="top" secondItem="6L5-f8-xu9" secondAttribute="bottom" constant="40" id="3Ja-cv-732"/>
                             <constraint firstItem="suK-FL-SIc" firstAttribute="trailing" secondItem="Iq1-fw-Li0" secondAttribute="trailing" constant="59" id="5WH-Cx-MDr"/>
+                            <constraint firstItem="suK-FL-SIc" firstAttribute="trailing" secondItem="OOz-M8-a1A" secondAttribute="trailing" constant="59" id="5kf-SS-zj0"/>
+                            <constraint firstItem="sXf-sC-Mfs" firstAttribute="leading" secondItem="suK-FL-SIc" secondAttribute="leading" constant="59" id="5rd-y1-zvo"/>
                             <constraint firstItem="suK-FL-SIc" firstAttribute="trailing" secondItem="6L5-f8-xu9" secondAttribute="trailing" constant="16" id="84Q-Uc-9ah"/>
+                            <constraint firstItem="suK-FL-SIc" firstAttribute="trailing" secondItem="sXf-sC-Mfs" secondAttribute="trailing" constant="59" id="9jU-d2-1mU"/>
                             <constraint firstItem="2qY-EK-ifJ" firstAttribute="top" secondItem="Qw5-tt-FkT" secondAttribute="bottom" constant="40" id="CuQ-Ek-aTg"/>
                             <constraint firstItem="suK-FL-SIc" firstAttribute="trailing" secondItem="2qY-EK-ifJ" secondAttribute="trailing" constant="59" id="I2F-Xf-hax"/>
                             <constraint firstItem="Qw5-tt-FkT" firstAttribute="centerX" secondItem="pDP-YN-klw" secondAttribute="centerX" id="Ktl-p9-TzV"/>
-                            <constraint firstItem="OOz-M8-a1A" firstAttribute="centerX" secondItem="pDP-YN-klw" secondAttribute="centerX" id="juY-R6-8nJ"/>
+                            <constraint firstItem="nLR-Mh-S2N" firstAttribute="centerX" secondItem="pDP-YN-klw" secondAttribute="centerX" id="LpY-fR-40m"/>
+                            <constraint firstItem="z0J-vn-tGh" firstAttribute="leading" secondItem="suK-FL-SIc" secondAttribute="leading" constant="59" id="dfn-nl-nRh"/>
+                            <constraint firstItem="OOz-M8-a1A" firstAttribute="leading" secondItem="suK-FL-SIc" secondAttribute="leading" constant="59" id="gyF-Oh-Mgs"/>
+                            <constraint firstItem="z0J-vn-tGh" firstAttribute="top" secondItem="sXf-sC-Mfs" secondAttribute="bottom" constant="20" id="hQ0-0m-230"/>
                             <constraint firstItem="Iq1-fw-Li0" firstAttribute="leading" secondItem="suK-FL-SIc" secondAttribute="leading" constant="59" id="k3s-VT-c5C"/>
+                            <constraint firstItem="suK-FL-SIc" firstAttribute="trailing" secondItem="z0J-vn-tGh" secondAttribute="trailing" constant="59" id="mSL-8t-cp9"/>
+                            <constraint firstItem="nLR-Mh-S2N" firstAttribute="top" secondItem="Iq1-fw-Li0" secondAttribute="bottom" constant="50" id="nAx-iH-cQd"/>
                             <constraint firstItem="6L5-f8-xu9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="suK-FL-SIc" secondAttribute="leading" symbolic="YES" id="rMk-DS-kUr"/>
                             <constraint firstItem="OOz-M8-a1A" firstAttribute="top" secondItem="2qY-EK-ifJ" secondAttribute="bottom" constant="50" id="soF-cz-rwd"/>
                             <constraint firstItem="2qY-EK-ifJ" firstAttribute="leading" secondItem="suK-FL-SIc" secondAttribute="leading" constant="59" id="trr-uX-DEE"/>
                             <constraint firstItem="Iq1-fw-Li0" firstAttribute="top" secondItem="OOz-M8-a1A" secondAttribute="bottom" constant="40" id="veA-fl-Yk3"/>
                             <constraint firstItem="Qw5-tt-FkT" firstAttribute="top" secondItem="BQL-R3-ybg" secondAttribute="bottom" constant="50" id="wHM-Vm-u7t"/>
+                            <constraint firstItem="sXf-sC-Mfs" firstAttribute="top" secondItem="nLR-Mh-S2N" secondAttribute="bottom" constant="20" id="xnK-gq-dZe"/>
                             <constraint firstItem="6L5-f8-xu9" firstAttribute="top" secondItem="suK-FL-SIc" secondAttribute="top" id="y07-PA-KVp"/>
                         </constraints>
                     </view>
@@ -180,6 +213,7 @@
                         <outlet property="label" destination="2qY-EK-ifJ" id="CTZ-Ar-oqG"/>
                         <outlet property="segmentedControl" destination="Qw5-tt-FkT" id="PwR-bR-DeD"/>
                         <outlet property="slider" destination="Iq1-fw-Li0" id="m2Y-dk-StJ"/>
+                        <outlet property="textField" destination="sXf-sC-Mfs" id="NcA-3s-O6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDJ-Fk-dBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

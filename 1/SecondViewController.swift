@@ -11,6 +11,7 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
@@ -36,7 +37,7 @@ class SecondViewController: UIViewController {
 
     @IBAction func choiceSegment(_ sender: UISegmentedControl) {
         
-        label.isHidden = false
+//        label.isHidden = false
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -54,10 +55,30 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
+        
+        label.textColor = .black
         label.text = String(sender.value)
         
         let backgroundColor = self.view.backgroundColor
         self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+    }
+    
+    @IBAction func donePressed(_ sender: UIButton) {
+        
+        label.textColor = .black
+        guard textField.text?.isEmpty == false else { return }
+        
+        if let _ = Double(textField.text!) {
+            let alert = UIAlertController(title: "Wrong format", message: "Please enter your name", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+            textField.text = nil
+//            print("Name format is wrong")
+        } else {
+            label.text = textField.text
+            textField.text = nil
+        }
     }
     
 }
