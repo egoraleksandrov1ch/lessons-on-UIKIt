@@ -14,6 +14,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var miniView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var switchLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
@@ -95,5 +97,21 @@ class SecondViewController: UIViewController {
         
         let dateValue = dateFormatter.string(from: sender.date)
         label.text = dateValue
+    }
+    
+    @IBAction func switchAction(_ sender: UISwitch) {
+        
+        segmentedControl.isHidden = !segmentedControl.isHidden
+        label.isHidden = !label.isHidden
+        slider.isHidden = !slider.isHidden
+        textField.isHidden = !textField.isHidden
+        datePicker.isHidden = !datePicker.isHidden
+        doneButton.isHidden = !doneButton.isHidden
+        
+        if sender.isOn {
+            switchLabel.text = "Отобразить все элементы"
+        } else {
+            switchLabel.text = "Скрыть все элементы"
+        }
     }
 }
