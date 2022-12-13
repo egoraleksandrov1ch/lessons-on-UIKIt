@@ -202,6 +202,9 @@
                                                     <constraint firstAttribute="height" constant="200" id="Mry-h0-4lh"/>
                                                     <constraint firstAttribute="width" constant="333" id="wTm-oW-ZNc"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeDate:" destination="Gmz-To-vKy" eventType="valueChanged" id="hGS-sq-0Ct"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -274,7 +277,9 @@
                     <navigationItem key="navigationItem" id="t10-e1-I92"/>
                     <size key="freeformSize" width="393" height="1200"/>
                     <connections>
+                        <outlet property="datePicker" destination="ku8-pv-q6d" id="Kb1-ZU-vqs"/>
                         <outlet property="label" destination="2qY-EK-ifJ" id="CTZ-Ar-oqG"/>
+                        <outlet property="miniView" destination="H1y-eA-Mrc" id="M0p-az-Crr"/>
                         <outlet property="segmentedControl" destination="Qw5-tt-FkT" id="PwR-bR-DeD"/>
                         <outlet property="slider" destination="Iq1-fw-Li0" id="m2Y-dk-StJ"/>
                         <outlet property="textField" destination="sXf-sC-Mfs" id="NcA-3s-O6b"/>

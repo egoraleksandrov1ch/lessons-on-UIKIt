@@ -12,6 +12,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var miniView: UIView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
@@ -32,6 +34,8 @@ class SecondViewController: UIViewController {
         slider.minimumTrackTintColor = .green
         slider.maximumTrackTintColor = .red
         slider.thumbTintColor = .blue
+        
+        datePicker.locale = Locale(identifier: "ru_RU")
         
     }
 
@@ -60,7 +64,9 @@ class SecondViewController: UIViewController {
         label.text = String(sender.value)
         
         let backgroundColor = self.view.backgroundColor
+        let backgroundColorMini = miniView.backgroundColor
         self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+        miniView.backgroundColor = backgroundColorMini?.withAlphaComponent(CGFloat(sender.value))
     }
     
     @IBAction func donePressed(_ sender: UIButton) {
@@ -81,4 +87,13 @@ class SecondViewController: UIViewController {
         }
     }
     
+    @IBAction func changeDate(_ sender: UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+//        dateFormatter.locale = Locale(identifier: <#T##String#>)
+        
+        let dateValue = dateFormatter.string(from: sender.date)
+        label.text = dateValue
+    }
 }
