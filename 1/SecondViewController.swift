@@ -164,6 +164,10 @@ class SecondViewController: UIViewController {
             switchLabel.text = "Скрыть все элементы"
         }
     }
+    
+    @IBAction func unwindSegueToSecondVC(segue: UIStoryboardSegue) {
+        
+    }
 }
 
 extension SecondViewController: UIPickerViewDelegate, UIPickerViewDataSource {

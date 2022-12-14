@@ -13,6 +13,7 @@
 		7E970BF029472705002B8FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E970BEE29472705002B8FA0 /* Main.storyboard */; };
 		7E970BF229472706002B8FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E970BF129472706002B8FA0 /* Assets.xcassets */; };
 		7E970BF529472706002B8FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E970BF329472706002B8FA0 /* LaunchScreen.storyboard */; };
+		7EADF9442948994900FE1ED2 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADF9432948994900FE1ED2 /* ThirdViewController.swift */; };
 		7EF5125D29478B1D008B32DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5125C29478B1D008B32DB /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		7E970BF129472706002B8FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E970BF429472706002B8FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E970BF629472706002B8FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EADF9432948994900FE1ED2 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7EF5125C29478B1D008B32DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 				7E970BEA29472705002B8FA0 /* SceneDelegate.swift */,
 				7E970BEC29472705002B8FA0 /* ViewController.swift */,
 				7EF5125C29478B1D008B32DB /* SecondViewController.swift */,
+				7EADF9432948994900FE1ED2 /* ThirdViewController.swift */,
 				7E970BEE29472705002B8FA0 /* Main.storyboard */,
 				7E970BF129472706002B8FA0 /* Assets.xcassets */,
 				7E970BF329472706002B8FA0 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				7EF5125D29478B1D008B32DB /* SecondViewController.swift in Sources */,
 				7E970BED29472705002B8FA0 /* ViewController.swift in Sources */,
+				7EADF9442948994900FE1ED2 /* ThirdViewController.swift in Sources */,
 				7E970BE929472705002B8FA0 /* AppDelegate.swift in Sources */,
 				7E970BEB29472705002B8FA0 /* SceneDelegate.swift in Sources */,
 			);
