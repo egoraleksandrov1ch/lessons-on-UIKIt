@@ -10,6 +10,7 @@ import UIKit
 class ThirdViewController: UIViewController {
 
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var countLabel: UILabel!
     
@@ -17,10 +18,18 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
         
         textView.delegate = self
-        textView.text = ""
+//        textView.text = ""
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         textView.backgroundColor = self.view.backgroundColor
         textView.layer.cornerRadius = 10
+        
+        stepper.value = 17
+        stepper.minimumValue = 10
+        stepper.maximumValue = 25
+        
+        stepper.tintColor = .white
+        stepper.backgroundColor = .gray
+        stepper.layer.cornerRadius = 5
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
@@ -60,6 +69,17 @@ class ThirdViewController: UIViewController {
         }
         
         textView.scrollRangeToVisible(textView.selectedRange)
+    }
+    
+    @IBAction func sizeFont(_ sender: UIStepper) {
+        let font = textView.font?.fontName
+        let fontSize = CGFloat(sender.value)
+        
+        textView.font = UIFont(name: font!, size: fontSize)
+    }
+    
+    @IBAction func unwindSegueToThirdVC(segue: UIStoryboardSegue) {
+        
     }
 
 }

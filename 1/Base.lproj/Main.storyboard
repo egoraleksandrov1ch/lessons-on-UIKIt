@@ -366,12 +366,15 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                                <connections>
+                                    <segue destination="Yy7-yr-xbW" kind="show" id="qse-G8-b8p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozs-Cb-Vv3">
                                 <rect key="frame" x="16" y="59" width="100" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="dOh-3F-8mF"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="kjF-Q7-Kh8"/>
+                                    <constraint firstAttribute="height" constant="35" id="Y8g-K9-Po0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="yh9-Rn-b5e"/>
                                 </constraints>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -400,28 +403,36 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asR-ER-idk">
-                                <rect key="frame" x="16" y="179" width="69" height="21"/>
+                                <rect key="frame" x="74.666666666666671" y="179" width="10.333333333333329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="64H-46-WJH">
+                                <rect key="frame" x="283" y="173" width="94" height="32"/>
+                                <connections>
+                                    <action selector="sizeFont:" destination="fw3-HL-2GL" eventType="valueChanged" id="7CV-g9-Hdb"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dMb-3P-YAy"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="dhK-ZE-hUO" secondAttribute="trailing" constant="30" id="1SA-zr-6ig"/>
-                            <constraint firstItem="N4m-3f-noj" firstAttribute="leading" secondItem="Ozs-Cb-Vv3" secondAttribute="trailing" constant="161" id="40E-dp-gN3"/>
+                            <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="64H-46-WJH" secondAttribute="trailing" constant="16" id="2y8-vm-b8Q"/>
                             <constraint firstItem="N4m-3f-noj" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="6yy-Ot-q7c"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="asR-ER-idk" secondAttribute="trailing" constant="308" id="AVB-C2-MIW"/>
-                            <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="Tha-LC-xmQ"/>
+                            <constraint firstItem="64H-46-WJH" firstAttribute="top" secondItem="dhK-ZE-hUO" secondAttribute="bottom" constant="24" id="Rge-5y-Sds"/>
+                            <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMb-3P-YAy" secondAttribute="leading" id="VQz-xS-hPg"/>
+                            <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="Z6Z-QR-yRC"/>
                             <constraint firstItem="dhK-ZE-hUO" firstAttribute="top" secondItem="N4m-3f-noj" secondAttribute="bottom" constant="20" id="aZw-LE-75y"/>
-                            <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMb-3P-YAy" secondAttribute="leading" id="aac-Iw-chI"/>
                             <constraint firstItem="dhK-ZE-hUO" firstAttribute="leading" secondItem="dMb-3P-YAy" secondAttribute="leading" constant="30" id="bub-Md-um3"/>
-                            <constraint firstItem="asR-ER-idk" firstAttribute="leading" secondItem="Ozs-Cb-Vv3" secondAttribute="leading" id="cXr-YG-w5e"/>
                             <constraint firstItem="UZF-5S-62O" firstAttribute="leading" secondItem="dMb-3P-YAy" secondAttribute="leading" constant="16" id="gBd-TV-Ede"/>
+                            <constraint firstItem="N4m-3f-noj" firstAttribute="leading" secondItem="Ozs-Cb-Vv3" secondAttribute="trailing" constant="161" id="pPh-KD-IkM"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="N4m-3f-noj" secondAttribute="trailing" constant="16" id="pj8-hS-Ei0"/>
                             <constraint firstItem="asR-ER-idk" firstAttribute="top" secondItem="dhK-ZE-hUO" secondAttribute="bottom" constant="30" id="qxf-lu-ZVz"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="UZF-5S-62O" secondAttribute="trailing" constant="16" id="sLW-WN-vG9"/>
+                            <constraint firstItem="asR-ER-idk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMb-3P-YAy" secondAttribute="leading" symbolic="YES" id="wIP-qD-UF0"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="bottom" secondItem="UZF-5S-62O" secondAttribute="bottom" constant="69" id="y9h-KW-ps3"/>
                             <constraint firstItem="UZF-5S-62O" firstAttribute="top" secondItem="asR-ER-idk" secondAttribute="bottom" constant="30" id="yAG-ud-a2r"/>
                         </constraints>
@@ -429,6 +440,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                     <navigationItem key="navigationItem" id="PHd-qk-JZq"/>
                     <connections>
                         <outlet property="countLabel" destination="asR-ER-idk" id="Mas-08-jmr"/>
+                        <outlet property="stepper" destination="64H-46-WJH" id="4hb-LE-RV9"/>
                         <outlet property="textView" destination="UZF-5S-62O" id="UdE-Wl-74G"/>
                         <outlet property="textViewBottomConstraint" destination="y9h-KW-ps3" id="sjD-kO-mjl"/>
                     </connections>
@@ -437,6 +449,55 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                 <exit id="Wi9-t2-Xcj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1626.7175572519084" y="-2.1126760563380285"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="w9s-dI-ycM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Yy7-yr-xbW" customClass="FourthViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WyX-TT-uBd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbD-jf-0RH">
+                                <rect key="frame" x="277" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OKO-6e-IJW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="WHv-j4-enl"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwT-2n-l6c">
+                                <rect key="frame" x="16" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7l3-Zz-rFS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Vlh-HD-3lW"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="back"/>
+                                <connections>
+                                    <segue destination="Jg7-aS-YNo" kind="unwind" unwindAction="unwindSegueToThirdVCWithSegue:" id="QUA-Ow-qD9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7GX-BA-2yV"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="TwT-2n-l6c" firstAttribute="top" secondItem="7GX-BA-2yV" secondAttribute="top" id="6un-3f-8DH"/>
+                            <constraint firstItem="SbD-jf-0RH" firstAttribute="top" secondItem="7GX-BA-2yV" secondAttribute="top" id="FVk-dW-xME"/>
+                            <constraint firstItem="7GX-BA-2yV" firstAttribute="trailing" secondItem="SbD-jf-0RH" secondAttribute="trailing" constant="16" id="PCd-eu-w0p"/>
+                            <constraint firstItem="TwT-2n-l6c" firstAttribute="leading" secondItem="7GX-BA-2yV" secondAttribute="leading" constant="16" id="Tng-T0-Y4m"/>
+                            <constraint firstItem="SbD-jf-0RH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TwT-2n-l6c" secondAttribute="trailing" constant="8" symbolic="YES" id="eqG-oq-j9z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vCE-NV-J9F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoA-YA-pr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Jg7-aS-YNo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2389" y="-2"/>
         </scene>
     </scenes>
     <resources>
