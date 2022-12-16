@@ -417,6 +417,9 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-qg-ftR">
                                 <rect key="frame" x="186.66666666666666" y="479.66666666666669" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nLH-OF-82K">
+                                <rect key="frame" x="16" y="230" width="361" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dMb-3P-YAy"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -425,18 +428,21 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="64H-46-WJH" secondAttribute="trailing" constant="16" id="2y8-vm-b8Q"/>
                             <constraint firstItem="N4m-3f-noj" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="6yy-Ot-q7c"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="asR-ER-idk" secondAttribute="trailing" constant="308" id="AVB-C2-MIW"/>
+                            <constraint firstItem="nLH-OF-82K" firstAttribute="top" secondItem="UZF-5S-62O" secondAttribute="top" id="Er1-BP-rxt"/>
                             <constraint firstItem="Pb3-qg-ftR" firstAttribute="centerX" secondItem="UZF-5S-62O" secondAttribute="centerX" id="Kb5-rP-852"/>
                             <constraint firstItem="64H-46-WJH" firstAttribute="top" secondItem="dhK-ZE-hUO" secondAttribute="bottom" constant="24" id="Rge-5y-Sds"/>
                             <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMb-3P-YAy" secondAttribute="leading" id="VQz-xS-hPg"/>
                             <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="Z6Z-QR-yRC"/>
                             <constraint firstItem="dhK-ZE-hUO" firstAttribute="top" secondItem="N4m-3f-noj" secondAttribute="bottom" constant="20" id="aZw-LE-75y"/>
                             <constraint firstItem="dhK-ZE-hUO" firstAttribute="leading" secondItem="dMb-3P-YAy" secondAttribute="leading" constant="30" id="bub-Md-um3"/>
+                            <constraint firstItem="nLH-OF-82K" firstAttribute="width" secondItem="UZF-5S-62O" secondAttribute="width" id="dxt-sP-wMw"/>
                             <constraint firstItem="UZF-5S-62O" firstAttribute="leading" secondItem="dMb-3P-YAy" secondAttribute="leading" constant="16" id="gBd-TV-Ede"/>
                             <constraint firstItem="Pb3-qg-ftR" firstAttribute="centerY" secondItem="UZF-5S-62O" secondAttribute="centerY" id="oYn-JC-h8b"/>
                             <constraint firstItem="N4m-3f-noj" firstAttribute="leading" secondItem="Ozs-Cb-Vv3" secondAttribute="trailing" constant="161" id="pPh-KD-IkM"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="N4m-3f-noj" secondAttribute="trailing" constant="16" id="pj8-hS-Ei0"/>
                             <constraint firstItem="asR-ER-idk" firstAttribute="top" secondItem="dhK-ZE-hUO" secondAttribute="bottom" constant="30" id="qxf-lu-ZVz"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="UZF-5S-62O" secondAttribute="trailing" constant="16" id="sLW-WN-vG9"/>
+                            <constraint firstItem="nLH-OF-82K" firstAttribute="centerX" secondItem="UZF-5S-62O" secondAttribute="centerX" id="tXZ-in-zze"/>
                             <constraint firstItem="asR-ER-idk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMb-3P-YAy" secondAttribute="leading" symbolic="YES" id="wIP-qD-UF0"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="bottom" secondItem="UZF-5S-62O" secondAttribute="bottom" constant="69" id="y9h-KW-ps3"/>
                             <constraint firstItem="UZF-5S-62O" firstAttribute="top" secondItem="asR-ER-idk" secondAttribute="bottom" constant="30" id="yAG-ud-a2r"/>
@@ -446,6 +452,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                     <connections>
                         <outlet property="activityIndicator" destination="Pb3-qg-ftR" id="JKL-gu-T28"/>
                         <outlet property="countLabel" destination="asR-ER-idk" id="Mas-08-jmr"/>
+                        <outlet property="porgressView" destination="nLH-OF-82K" id="8Pa-gz-ZLc"/>
                         <outlet property="stepper" destination="64H-46-WJH" id="4hb-LE-RV9"/>
                         <outlet property="textView" destination="UZF-5S-62O" id="UdE-Wl-74G"/>
                         <outlet property="textViewBottomConstraint" destination="y9h-KW-ps3" id="sjD-kO-mjl"/>

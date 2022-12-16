@@ -14,13 +14,14 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var porgressView: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textView.delegate = self
         textView.isHidden = true
-        textView.alpha = 0
+//        textView.alpha = 0
         
 //        textView.text = ""
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
@@ -40,6 +41,8 @@ class ThirdViewController: UIViewController {
         activityIndicator.startAnimating()
         self.textView.isUserInteractionEnabled = false
         
+        porgressView.setProgress(0, animated: true)
+        
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
@@ -52,12 +55,25 @@ class ThirdViewController: UIViewController {
                                                object: nil)
         
         // not work on third screen
-        UIView.animate(withDuration: 0, delay: 20, options: .curveLinear, animations: {
-            self.textView.alpha = 1
-        }) { (cool) in
-            self.activityIndicator.stopAnimating()
-            self.textView.isHidden = false
-            self.textView.isUserInteractionEnabled = true
+//        UIView.animate(withDuration: 0, delay: 20, options: .curveLinear, animations: {
+//            self.textView.alpha = 1
+//        }) { (cool) in
+//            self.activityIndicator.stopAnimating()
+//            self.textView.isHidden = false
+//            self.textView.isUserInteractionEnabled = true
+//        }
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { timer in
+            if self.porgressView.progress != 1 {
+                self.porgressView.progress += 0.0005
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.textView.isHidden = false
+                self.textView.isUserInteractionEnabled = true
+                self.porgressView.isHidden = true
+                // stop Timer
+                timer.invalidate()
+            }
         }
 
     }
