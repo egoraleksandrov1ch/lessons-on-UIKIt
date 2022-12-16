@@ -63,7 +63,7 @@ class ThirdViewController: UIViewController {
 //            self.textView.isUserInteractionEnabled = true
 //        }
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { timer in
+        let _ = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { timer in
             if self.porgressView.progress != 1 {
                 self.porgressView.progress += 0.0005
             } else {
