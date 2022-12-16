@@ -13,11 +13,15 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textView.delegate = self
+        textView.isHidden = true
+        textView.alpha = 0
+        
 //        textView.text = ""
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         textView.backgroundColor = self.view.backgroundColor
@@ -31,6 +35,12 @@ class ThirdViewController: UIViewController {
         stepper.backgroundColor = .gray
         stepper.layer.cornerRadius = 5
         
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = .gray
+        activityIndicator.startAnimating()
+        self.textView.isUserInteractionEnabled = false
+        
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
                                                name: UIResponder.keyboardWillShowNotification,
@@ -41,6 +51,15 @@ class ThirdViewController: UIViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
         
+        // not work on third screen
+        UIView.animate(withDuration: 0, delay: 20, options: .curveLinear, animations: {
+            self.textView.alpha = 1
+        }) { (cool) in
+            self.activityIndicator.stopAnimating()
+            self.textView.isHidden = false
+            self.textView.isUserInteractionEnabled = true
+        }
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -81,7 +100,7 @@ class ThirdViewController: UIViewController {
     @IBAction func unwindSegueToThirdVC(segue: UIStoryboardSegue) {
         
     }
-
+    
 }
 
 extension ThirdViewController: UITextViewDelegate {

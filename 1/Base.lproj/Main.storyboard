@@ -304,7 +304,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title=" next"/>
                                 <connections>
-                                    <segue destination="fw3-HL-2GL" kind="show" id="zxI-MO-jMf"/>
+                                    <segue destination="fw3-HL-2GL" kind="show" id="wSO-BK-6uS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-Sc-Kng">
@@ -395,9 +395,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-5S-62O">
                                 <rect key="frame" x="16" y="230" width="361" height="519"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Manage the keyboard
+                                <string key="text">Manage the keyboard
 When the user taps in an editable text view, that text view becomes the first responder and automatically asks the system to display the associated keyboard. Because the appearance of the keyboard has the potential to obscure portions of your user interface, it’s up to you to make sure that doesn’t happen by repositioning any views that might be obscured. Some system views, like table views, help you by scrolling the first responder into view automatically. If the first responder is at the bottom of the scrolling region, however, you may still need to resize or reposition the scroll view itself to ensure the first responder is visible.
-It’s your application’s responsibility to dismiss the keyboard at the time of your choosing. You might dismiss the keyboard in response to a specific user action, such as the user tapping a particular button in your user interface. To dismiss the keyboard, send the resignFirstResponder message to the text view that’s currently the first responder. Doing so causes the text view object to end the current editing session (with the delegate object’s consent) and hide the keyboard.</mutableString>
+It’s your application’s responsibility to dismiss the keyboard at the time of your choosing. You might dismiss the keyboard in response to a specific user action, such as the user tapping a particular button in your user interface. To dismiss the keyboard, send the resignFirstResponder message to the text view that’s currently the first responder. Doing so causes the text view object to end the current editing session (with the delegate object’s consent) and hide the keyboard.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -414,6 +414,9 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                     <action selector="sizeFont:" destination="fw3-HL-2GL" eventType="valueChanged" id="7CV-g9-Hdb"/>
                                 </connections>
                             </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-qg-ftR">
+                                <rect key="frame" x="186.66666666666666" y="479.66666666666669" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dMb-3P-YAy"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -422,12 +425,14 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="64H-46-WJH" secondAttribute="trailing" constant="16" id="2y8-vm-b8Q"/>
                             <constraint firstItem="N4m-3f-noj" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="6yy-Ot-q7c"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="asR-ER-idk" secondAttribute="trailing" constant="308" id="AVB-C2-MIW"/>
+                            <constraint firstItem="Pb3-qg-ftR" firstAttribute="centerX" secondItem="UZF-5S-62O" secondAttribute="centerX" id="Kb5-rP-852"/>
                             <constraint firstItem="64H-46-WJH" firstAttribute="top" secondItem="dhK-ZE-hUO" secondAttribute="bottom" constant="24" id="Rge-5y-Sds"/>
                             <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMb-3P-YAy" secondAttribute="leading" id="VQz-xS-hPg"/>
                             <constraint firstItem="Ozs-Cb-Vv3" firstAttribute="top" secondItem="dMb-3P-YAy" secondAttribute="top" id="Z6Z-QR-yRC"/>
                             <constraint firstItem="dhK-ZE-hUO" firstAttribute="top" secondItem="N4m-3f-noj" secondAttribute="bottom" constant="20" id="aZw-LE-75y"/>
                             <constraint firstItem="dhK-ZE-hUO" firstAttribute="leading" secondItem="dMb-3P-YAy" secondAttribute="leading" constant="30" id="bub-Md-um3"/>
                             <constraint firstItem="UZF-5S-62O" firstAttribute="leading" secondItem="dMb-3P-YAy" secondAttribute="leading" constant="16" id="gBd-TV-Ede"/>
+                            <constraint firstItem="Pb3-qg-ftR" firstAttribute="centerY" secondItem="UZF-5S-62O" secondAttribute="centerY" id="oYn-JC-h8b"/>
                             <constraint firstItem="N4m-3f-noj" firstAttribute="leading" secondItem="Ozs-Cb-Vv3" secondAttribute="trailing" constant="161" id="pPh-KD-IkM"/>
                             <constraint firstItem="dMb-3P-YAy" firstAttribute="trailing" secondItem="N4m-3f-noj" secondAttribute="trailing" constant="16" id="pj8-hS-Ei0"/>
                             <constraint firstItem="asR-ER-idk" firstAttribute="top" secondItem="dhK-ZE-hUO" secondAttribute="bottom" constant="30" id="qxf-lu-ZVz"/>
@@ -439,6 +444,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                     </view>
                     <navigationItem key="navigationItem" id="PHd-qk-JZq"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Pb3-qg-ftR" id="JKL-gu-T28"/>
                         <outlet property="countLabel" destination="asR-ER-idk" id="Mas-08-jmr"/>
                         <outlet property="stepper" destination="64H-46-WJH" id="4hb-LE-RV9"/>
                         <outlet property="textView" destination="UZF-5S-62O" id="UdE-Wl-74G"/>

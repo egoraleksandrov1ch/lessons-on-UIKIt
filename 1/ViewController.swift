@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         button.setTitle("Clear", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .red
+        
     }
 
     @IBAction func pressedButton(_ sender: UIButton) {
