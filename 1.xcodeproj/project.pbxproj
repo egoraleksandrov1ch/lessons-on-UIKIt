@@ -15,6 +15,7 @@
 		7E321796294E23D0007538C1 /* CoverInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E321795294E23D0007538C1 /* CoverInfoVC.swift */; };
 		7E32179A294E3A8F007538C1 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E321799294E3A8F007538C1 /* FirstScreen.swift */; };
 		7E32179C294E3A9C007538C1 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32179B294E3A9C007538C1 /* SecondScreen.swift */; };
+		7E32179E294E3E8F007538C1 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32179D294E3E8F007538C1 /* SixthViewController.swift */; };
 		7E970BE929472705002B8FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E970BE829472705002B8FA0 /* AppDelegate.swift */; };
 		7E970BEB29472705002B8FA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E970BEA29472705002B8FA0 /* SceneDelegate.swift */; };
 		7E970BED29472705002B8FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E970BEC29472705002B8FA0 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		7E321795294E23D0007538C1 /* CoverInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverInfoVC.swift; sourceTree = "<group>"; };
 		7E321799294E3A8F007538C1 /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		7E32179B294E3A9C007538C1 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
+		7E32179D294E3E8F007538C1 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
 		7E970BE529472705002B8FA0 /* 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E970BE829472705002B8FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E970BEA29472705002B8FA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				7E32178F294CFDAD007538C1 /* FourthViewController.swift */,
 				7E321799294E3A8F007538C1 /* FirstScreen.swift */,
 				7E32179B294E3A9C007538C1 /* SecondScreen.swift */,
+				7E32179D294E3E8F007538C1 /* SixthViewController.swift */,
 				7E970BEE29472705002B8FA0 /* Main.storyboard */,
 				7E970BF129472706002B8FA0 /* Assets.xcassets */,
 				7E970BF329472706002B8FA0 /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF5125D29478B1D008B32DB /* SecondViewController.swift in Sources */,
+				7E32179E294E3E8F007538C1 /* SixthViewController.swift in Sources */,
 				7E321796294E23D0007538C1 /* CoverInfoVC.swift in Sources */,
 				7E970BED29472705002B8FA0 /* ViewController.swift in Sources */,
 				7E32179C294E3A9C007538C1 /* SecondScreen.swift in Sources */,

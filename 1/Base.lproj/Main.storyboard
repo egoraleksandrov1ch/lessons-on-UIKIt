@@ -952,18 +952,51 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-8A-Srs">
+                                <rect key="frame" x="16" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JGG-Vv-rSl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dLK-oA-4tE"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="back"/>
+                                <connections>
+                                    <segue destination="fVf-y4-Wwj" kind="unwind" unwindAction="unwindSegueToFourthViewControllerWithSegue:" id="LwJ-b0-8sF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ez-mg-R2h">
+                                <rect key="frame" x="277" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IBI-4w-ZBb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mXK-vj-Bgf"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                                <connections>
+                                    <segue destination="IGi-IQ-6mL" kind="show" id="fs4-kM-shg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S6o-fr-K5c"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="gEh-8A-Srs" firstAttribute="leading" secondItem="S6o-fr-K5c" secondAttribute="leading" constant="16" id="2z5-eG-71x"/>
                             <constraint firstItem="brM-97-IKX" firstAttribute="centerX" secondItem="gcp-sz-qOy" secondAttribute="centerX" id="92r-WU-wDt"/>
                             <constraint firstItem="brM-97-IKX" firstAttribute="centerY" secondItem="gcp-sz-qOy" secondAttribute="centerY" id="FU9-RF-hWH"/>
+                            <constraint firstItem="0ez-mg-R2h" firstAttribute="width" secondItem="gEh-8A-Srs" secondAttribute="width" id="QZL-o1-UdZ"/>
+                            <constraint firstItem="0ez-mg-R2h" firstAttribute="top" secondItem="S6o-fr-K5c" secondAttribute="top" id="X1A-Bj-jmh"/>
+                            <constraint firstItem="gEh-8A-Srs" firstAttribute="top" secondItem="S6o-fr-K5c" secondAttribute="top" id="YY9-DR-5n8"/>
+                            <constraint firstItem="0ez-mg-R2h" firstAttribute="leading" secondItem="gEh-8A-Srs" secondAttribute="trailing" constant="161" id="coz-Wi-qv5"/>
+                            <constraint firstItem="S6o-fr-K5c" firstAttribute="trailing" secondItem="0ez-mg-R2h" secondAttribute="trailing" constant="16" id="unE-vE-8je"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First Screen" image="Random 3" id="5jS-vq-Jkl"/>
                     <navigationItem key="navigationItem" id="nhr-Sw-qyq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-aJ-7J0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fVf-y4-Wwj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7853" y="-389"/>
         </scene>
@@ -981,17 +1014,50 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTv-gW-4KF">
+                                <rect key="frame" x="16" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gAS-7q-qHc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="t5i-EM-Xbh"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="back"/>
+                                <connections>
+                                    <segue destination="6z7-OB-UQs" kind="unwind" unwindAction="unwindSegueToFourthViewControllerWithSegue:" id="D3i-XW-f3l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-SZ-R9i">
+                                <rect key="frame" x="277" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="DQq-ZA-eUd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="aCd-gA-oFu"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                                <connections>
+                                    <segue destination="IGi-IQ-6mL" kind="show" id="VPQ-SE-PQx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ivI-tv-9ih"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="rOT-SZ-R9i" firstAttribute="leading" secondItem="xTv-gW-4KF" secondAttribute="trailing" constant="161" id="D1e-bR-KM3"/>
                             <constraint firstItem="rZD-8D-sP4" firstAttribute="centerY" secondItem="S5x-TH-WJu" secondAttribute="centerY" id="GL6-Lg-KoJ"/>
+                            <constraint firstItem="ivI-tv-9ih" firstAttribute="trailing" secondItem="rOT-SZ-R9i" secondAttribute="trailing" constant="16" id="IQL-R0-hu8"/>
+                            <constraint firstItem="xTv-gW-4KF" firstAttribute="top" secondItem="ivI-tv-9ih" secondAttribute="top" id="RjN-vO-0qn"/>
+                            <constraint firstItem="rOT-SZ-R9i" firstAttribute="top" secondItem="ivI-tv-9ih" secondAttribute="top" id="VN1-gT-Fzf"/>
+                            <constraint firstItem="xTv-gW-4KF" firstAttribute="leading" secondItem="ivI-tv-9ih" secondAttribute="leading" constant="16" id="Y6Z-80-YkX"/>
                             <constraint firstItem="rZD-8D-sP4" firstAttribute="centerX" secondItem="S5x-TH-WJu" secondAttribute="centerX" id="nOn-gd-5uF"/>
+                            <constraint firstItem="rOT-SZ-R9i" firstAttribute="width" secondItem="xTv-gW-4KF" secondAttribute="width" id="sPj-bQ-8MR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second Screen" image="ic_shuffle" id="W0s-7u-wm7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZh-ba-JSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6z7-OB-UQs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7853" y="302"/>
         </scene>
@@ -1035,7 +1101,110 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
             </objects>
             <point key="canvasLocation" x="6745.801526717557" y="-2.1126760563380285"/>
         </scene>
+        <!--Sixth View Controller-->
+        <scene sceneID="XY4-Ej-OyI">
+            <objects>
+                <viewController id="IGi-IQ-6mL" customClass="SixthViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UUe-gQ-Mur">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-TK-vPx">
+                                <rect key="frame" x="16" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Urn-CB-Hpp"/>
+                                    <constraint firstAttribute="height" constant="35" id="jzu-BE-oYM"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="back"/>
+                                <connections>
+                                    <segue destination="aSv-oF-529" kind="unwind" unwindAction="unwindSegueToFirstScreenVCWithSegue:" id="rkm-jj-sTL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-Ra-TQt">
+                                <rect key="frame" x="277" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="AbB-PC-1NO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mmR-TP-gNE"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UL4-Pv-Zfd">
+                                <rect key="frame" x="0.0" y="145" width="393" height="707"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-5W-7GV">
+                                <rect key="frame" x="326" y="102" width="51" height="35"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="forwardButtonAction:" destination="IGi-IQ-6mL" eventType="touchUpInside" id="uFz-Qg-xCR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVC-Hb-fUR">
+                                <rect key="frame" x="16" y="102" width="51" height="35"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.left.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="IGi-IQ-6mL" eventType="touchUpInside" id="eIC-nT-JHo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lYm-Sv-wPM">
+                                <rect key="frame" x="75" y="103" width="243" height="34"/>
+                                <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cAt-d6-7XR"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cAt-d6-7XR" firstAttribute="trailing" secondItem="Ihj-5W-7GV" secondAttribute="trailing" constant="16" id="1Ej-MP-CZU"/>
+                            <constraint firstItem="Ihj-5W-7GV" firstAttribute="top" secondItem="ZLR-Ra-TQt" secondAttribute="bottom" constant="8" symbolic="YES" id="5vR-1G-sGr"/>
+                            <constraint firstItem="ZLR-Ra-TQt" firstAttribute="top" secondItem="cAt-d6-7XR" secondAttribute="top" id="8bL-aY-cC1"/>
+                            <constraint firstItem="Ihj-5W-7GV" firstAttribute="width" secondItem="DVC-Hb-fUR" secondAttribute="width" id="8mb-fz-rSv"/>
+                            <constraint firstAttribute="bottom" secondItem="UL4-Pv-Zfd" secondAttribute="bottom" id="8oX-FD-JQR"/>
+                            <constraint firstItem="YOp-TK-vPx" firstAttribute="top" secondItem="cAt-d6-7XR" secondAttribute="top" id="B2W-z4-zNq"/>
+                            <constraint firstItem="ZLR-Ra-TQt" firstAttribute="width" secondItem="YOp-TK-vPx" secondAttribute="width" id="Jqw-9w-JV6"/>
+                            <constraint firstItem="Ihj-5W-7GV" firstAttribute="leading" secondItem="lYm-Sv-wPM" secondAttribute="trailing" constant="8" symbolic="YES" id="R0w-WS-pTG"/>
+                            <constraint firstItem="cAt-d6-7XR" firstAttribute="trailing" secondItem="ZLR-Ra-TQt" secondAttribute="trailing" constant="16" id="Ufp-B4-Wbf"/>
+                            <constraint firstItem="lYm-Sv-wPM" firstAttribute="leading" secondItem="DVC-Hb-fUR" secondAttribute="trailing" constant="8" symbolic="YES" id="fcd-hv-ef9"/>
+                            <constraint firstItem="YOp-TK-vPx" firstAttribute="leading" secondItem="cAt-d6-7XR" secondAttribute="leading" constant="16" id="gmR-J5-fEX"/>
+                            <constraint firstItem="DVC-Hb-fUR" firstAttribute="leading" secondItem="cAt-d6-7XR" secondAttribute="leading" constant="16" id="jYY-pO-EYZ"/>
+                            <constraint firstItem="Ihj-5W-7GV" firstAttribute="leading" secondItem="DVC-Hb-fUR" secondAttribute="trailing" constant="259" id="jrZ-y1-vHq"/>
+                            <constraint firstAttribute="trailing" secondItem="UL4-Pv-Zfd" secondAttribute="trailing" id="kQM-sp-zZg"/>
+                            <constraint firstItem="DVC-Hb-fUR" firstAttribute="top" secondItem="YOp-TK-vPx" secondAttribute="bottom" constant="8" symbolic="YES" id="qgO-re-eu1"/>
+                            <constraint firstItem="UL4-Pv-Zfd" firstAttribute="top" secondItem="lYm-Sv-wPM" secondAttribute="bottom" constant="8" symbolic="YES" id="sCD-H0-hiG"/>
+                            <constraint firstItem="lYm-Sv-wPM" firstAttribute="top" secondItem="YOp-TK-vPx" secondAttribute="bottom" constant="9" id="uDK-xu-NEB"/>
+                            <constraint firstItem="UL4-Pv-Zfd" firstAttribute="leading" secondItem="cAt-d6-7XR" secondAttribute="leading" id="z1e-Zs-Vrf"/>
+                            <constraint firstItem="ZLR-Ra-TQt" firstAttribute="leading" secondItem="YOp-TK-vPx" secondAttribute="trailing" constant="161" id="zfZ-KR-RjE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SqW-jZ-XOF"/>
+                    <connections>
+                        <outlet property="backButton" destination="DVC-Hb-fUR" id="l9c-C7-3Xb"/>
+                        <outlet property="forwardButton" destination="Ihj-5W-7GV" id="wsN-3b-Bic"/>
+                        <outlet property="urlTextField" destination="lYm-Sv-wPM" id="KsY-V9-lv9"/>
+                        <outlet property="webView" destination="UL4-Pv-Zfd" id="0U1-4u-73g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2K-u6-SvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aSv-oF-529" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="8878.6259541984728" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fs4-kM-shg"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="3959" height="2585"/>
         <image name="2" width="2270" height="2018"/>
@@ -1046,6 +1215,8 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
         <image name="7" width="4892" height="2752"/>
         <image name="8" width="5348" height="3546"/>
         <image name="Random 3" width="24" height="24"/>
+        <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <image name="ic_shuffle" width="30" height="24"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
