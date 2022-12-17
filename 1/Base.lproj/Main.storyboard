@@ -696,6 +696,9 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                                <connections>
+                                    <segue destination="Wjh-zL-SUq" kind="show" id="Nhd-Sc-lgJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQi-15-zJv">
                                 <rect key="frame" x="16" y="59" width="100" height="35"/>
@@ -935,6 +938,63 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
             </objects>
             <point key="canvasLocation" x="5941.221374045801" y="-2.1126760563380285"/>
         </scene>
+        <!--First Screen-->
+        <scene sceneID="pwV-6O-b39">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="3nb-i3-ZxA" customClass="FirstScreen" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gcp-sz-qOy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brM-97-IKX">
+                                <rect key="frame" x="89.333333333333329" y="403.33333333333331" width="214.33333333333337" height="45.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S6o-fr-K5c"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="brM-97-IKX" firstAttribute="centerX" secondItem="gcp-sz-qOy" secondAttribute="centerX" id="92r-WU-wDt"/>
+                            <constraint firstItem="brM-97-IKX" firstAttribute="centerY" secondItem="gcp-sz-qOy" secondAttribute="centerY" id="FU9-RF-hWH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First Screen" image="Random 3" id="5jS-vq-Jkl"/>
+                    <navigationItem key="navigationItem" id="nhr-Sw-qyq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-aJ-7J0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7853" y="-389"/>
+        </scene>
+        <!--Second Screen-->
+        <scene sceneID="mBg-nx-BEi">
+            <objects>
+                <viewController id="wOl-TV-cPn" customClass="SecondScreen" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S5x-TH-WJu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZD-8D-sP4">
+                                <rect key="frame" x="59.333333333333343" y="403.33333333333331" width="274.33333333333326" height="45.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ivI-tv-9ih"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rZD-8D-sP4" firstAttribute="centerY" secondItem="S5x-TH-WJu" secondAttribute="centerY" id="GL6-Lg-KoJ"/>
+                            <constraint firstItem="rZD-8D-sP4" firstAttribute="centerX" secondItem="S5x-TH-WJu" secondAttribute="centerX" id="nOn-gd-5uF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second Screen" image="ic_shuffle" id="W0s-7u-wm7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZh-ba-JSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7853" y="302"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="y2r-kw-feI">
             <objects>
@@ -956,6 +1016,25 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
             </objects>
             <point key="canvasLocation" x="4174.8091603053435" y="-2.1126760563380285"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Q7f-FY-e0N">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wjh-zL-SUq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gou-QZ-56C"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6df-wL-bDb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3nb-i3-ZxA" kind="relationship" relationship="viewControllers" id="w25-LJ-7Uf"/>
+                        <segue destination="wOl-TV-cPn" kind="relationship" relationship="viewControllers" id="NlL-R9-d6c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itz-ex-rbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6745.801526717557" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="3959" height="2585"/>
@@ -966,6 +1045,8 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
         <image name="6" width="5472" height="3648"/>
         <image name="7" width="4892" height="2752"/>
         <image name="8" width="5348" height="3546"/>
+        <image name="Random 3" width="24" height="24"/>
+        <image name="ic_shuffle" width="30" height="24"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
