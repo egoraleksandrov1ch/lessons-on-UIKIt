@@ -17,8 +17,6 @@ class PreviewPage: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navigationController?.navigationBar.isHidden = true
-        
 
         
     }
@@ -54,6 +52,8 @@ class PreviewPage: UICollectionViewController {
         return cell
     }
     
-    
+    @IBAction func unwindSegueToPreviewPage(sugue: UIStoryboardSegue) {
+        
+    }
 
 }
