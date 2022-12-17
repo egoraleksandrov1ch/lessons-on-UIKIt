@@ -10,6 +10,9 @@
 		7E32178C294CDF25007538C1 /* TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32178B294CDF25007538C1 /* TrackList.swift */; };
 		7E32178E294CE5ED007538C1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32178D294CE5ED007538C1 /* DetailVC.swift */; };
 		7E321790294CFDAD007538C1 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32178F294CFDAD007538C1 /* FourthViewController.swift */; };
+		7E321792294E1440007538C1 /* PreviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E321791294E1440007538C1 /* PreviewPage.swift */; };
+		7E321794294E155A007538C1 /* ArtCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E321793294E155A007538C1 /* ArtCoverCell.swift */; };
+		7E321796294E23D0007538C1 /* CoverInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E321795294E23D0007538C1 /* CoverInfoVC.swift */; };
 		7E970BE929472705002B8FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E970BE829472705002B8FA0 /* AppDelegate.swift */; };
 		7E970BEB29472705002B8FA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E970BEA29472705002B8FA0 /* SceneDelegate.swift */; };
 		7E970BED29472705002B8FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E970BEC29472705002B8FA0 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 		7E32178B294CDF25007538C1 /* TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackList.swift; sourceTree = "<group>"; };
 		7E32178D294CE5ED007538C1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		7E32178F294CFDAD007538C1 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		7E321791294E1440007538C1 /* PreviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPage.swift; sourceTree = "<group>"; };
+		7E321793294E155A007538C1 /* ArtCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCoverCell.swift; sourceTree = "<group>"; };
+		7E321795294E23D0007538C1 /* CoverInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverInfoVC.swift; sourceTree = "<group>"; };
 		7E970BE529472705002B8FA0 /* 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E970BE829472705002B8FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E970BEA29472705002B8FA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				7EADF9432948994900FE1ED2 /* ThirdViewController.swift */,
 				7E32178B294CDF25007538C1 /* TrackList.swift */,
 				7E32178D294CE5ED007538C1 /* DetailVC.swift */,
+				7E321791294E1440007538C1 /* PreviewPage.swift */,
+				7E321793294E155A007538C1 /* ArtCoverCell.swift */,
+				7E321795294E23D0007538C1 /* CoverInfoVC.swift */,
 				7E32178F294CFDAD007538C1 /* FourthViewController.swift */,
 				7E970BEE29472705002B8FA0 /* Main.storyboard */,
 				7E970BF129472706002B8FA0 /* Assets.xcassets */,
@@ -154,9 +163,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF5125D29478B1D008B32DB /* SecondViewController.swift in Sources */,
+				7E321796294E23D0007538C1 /* CoverInfoVC.swift in Sources */,
 				7E970BED29472705002B8FA0 /* ViewController.swift in Sources */,
 				7EADF9442948994900FE1ED2 /* ThirdViewController.swift in Sources */,
+				7E321792294E1440007538C1 /* PreviewPage.swift in Sources */,
 				7E32178C294CDF25007538C1 /* TrackList.swift in Sources */,
+				7E321794294E155A007538C1 /* ArtCoverCell.swift in Sources */,
 				7E321790294CFDAD007538C1 /* FourthViewController.swift in Sources */,
 				7E970BE929472705002B8FA0 /* AppDelegate.swift in Sources */,
 				7E970BEB29472705002B8FA0 /* SceneDelegate.swift in Sources */,

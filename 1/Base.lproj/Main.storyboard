@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -500,7 +501,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                         <barButtonItem key="rightBarButtonItem" title="next" id="b7U-tJ-vZv">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="65a-Og-cp6" kind="show" id="BBm-V2-k5k"/>
+                                <segue destination="eXz-eq-cEC" kind="show" id="RTd-tL-04i"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -510,21 +511,112 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
             </objects>
             <point key="canvasLocation" x="3321.3740458015268" y="-2.1126760563380285"/>
         </scene>
-        <!--Fourth View Controller-->
-        <scene sceneID="dBX-rT-tHE">
+        <!--Cover InfoVC-->
+        <scene sceneID="5BO-gF-GkG">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="65a-Og-cp6" customClass="FourthViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ylb-cd-ApT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                <viewController modalPresentationStyle="fullScreen" id="Wu5-2H-A1p" customClass="CoverInfoVC" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l64-K7-Q27">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1TZ-4h-StL"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="noG-5N-7re">
+                                <rect key="frame" x="9" y="103" width="375" height="372"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="cDP-9X-lIF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QB-cP-ZnA">
+                                <rect key="frame" x="9" y="520" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Do7-fy-35r"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="noG-5N-7re" firstAttribute="top" secondItem="Do7-fy-35r" secondAttribute="top" id="5ev-RV-lbU"/>
+                            <constraint firstItem="Do7-fy-35r" firstAttribute="trailing" secondItem="noG-5N-7re" secondAttribute="trailing" constant="9" id="FQF-If-Shc"/>
+                            <constraint firstItem="Do7-fy-35r" firstAttribute="bottom" secondItem="2QB-cP-ZnA" secondAttribute="bottom" constant="277" id="I2y-td-oEK"/>
+                            <constraint firstItem="Do7-fy-35r" firstAttribute="trailing" secondItem="2QB-cP-ZnA" secondAttribute="trailing" constant="9" id="Kse-Ur-Nf0"/>
+                            <constraint firstItem="2QB-cP-ZnA" firstAttribute="top" secondItem="noG-5N-7re" secondAttribute="bottom" constant="45" id="Kvh-nW-gRc"/>
+                            <constraint firstItem="2QB-cP-ZnA" firstAttribute="leading" secondItem="Do7-fy-35r" secondAttribute="leading" constant="9" id="SmH-Nf-lPQ"/>
+                            <constraint firstItem="noG-5N-7re" firstAttribute="leading" secondItem="Do7-fy-35r" secondAttribute="leading" constant="9" id="pky-HI-6O7"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cGL-95-aHP"/>
+                    <navigationItem key="navigationItem" id="xpB-n7-MpL"/>
+                    <connections>
+                        <outlet property="coverImage" destination="noG-5N-7re" id="vdd-Pc-4pF"/>
+                        <outlet property="coverLabel" destination="2QB-cP-ZnA" id="Jz8-Ve-BZ7"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6dt-p8-z4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9j-4O-Ibw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4147" y="-2"/>
+            <point key="canvasLocation" x="5102" y="-673"/>
+        </scene>
+        <!--Songs BMTH-->
+        <scene sceneID="xfa-fi-52u">
+            <objects>
+                <collectionViewController modalPresentationStyle="fullScreen" id="MaL-Cm-kk8" customClass="PreviewPage" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sOO-m7-pBl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p5q-IN-WwR">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtCover" id="wpj-5d-Uf3" customClass="ArtCoverCell" customModule="_" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B2G-jN-CsM">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-RX-1YC">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9D9-RX-1YC" firstAttribute="top" secondItem="B2G-jN-CsM" secondAttribute="top" id="9u5-fC-ntx"/>
+                                        <constraint firstAttribute="trailing" secondItem="9D9-RX-1YC" secondAttribute="trailing" id="E9A-h2-qO6"/>
+                                        <constraint firstItem="9D9-RX-1YC" firstAttribute="leading" secondItem="B2G-jN-CsM" secondAttribute="leading" id="NUM-gT-iwt"/>
+                                        <constraint firstAttribute="bottom" secondItem="9D9-RX-1YC" secondAttribute="bottom" id="Naf-QJ-5JV"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="coverImageView" destination="9D9-RX-1YC" id="4Xs-bG-HJG"/>
+                                    <segue destination="Wu5-2H-A1p" kind="show" identifier="OpenCover" id="j15-US-PbT"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="MaL-Cm-kk8" id="NkA-3R-yne"/>
+                            <outlet property="delegate" destination="MaL-Cm-kk8" id="5Er-SD-lpp"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Songs BMTH" id="ij3-id-JYP">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="Wao-PK-TSZ">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="w0g-yl-SS3" kind="unwind" unwindAction="unwindSegueToTrackListWithSegue:" id="dXh-4m-Rn5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="next" id="g3i-M2-9EA">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="65a-Og-cp6" kind="show" id="jAT-NF-BBB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivE-dp-TRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="w0g-yl-SS3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5101.5267175572517" y="-2.1126760563380285"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="28a-Ni-B8x">
@@ -576,6 +668,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -585,6 +678,44 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inZ-HF-IGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2394.6564885496182" y="-2.1126760563380285"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="dBX-rT-tHE">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="65a-Og-cp6" customClass="FourthViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ylb-cd-ApT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1TZ-4h-StL"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rSq-Hj-2bw"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dt-p8-z4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5941.221374045801" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y2r-kw-feI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="eXz-eq-cEC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PBv-Pm-Af6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gjv-QH-4fZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MaL-Cm-kk8" kind="relationship" relationship="rootViewController" id="Axm-bf-ryv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="soI-eE-EXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4174.8091603053435" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
