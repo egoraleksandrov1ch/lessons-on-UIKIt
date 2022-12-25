@@ -404,7 +404,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asR-ER-idk">
-                                <rect key="frame" x="74.666666666666686" y="179" width="10.333333333333314" height="21"/>
+                                <rect key="frame" x="74.666666666666671" y="179" width="10.333333333333329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1089,6 +1089,7 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gou-QZ-56C"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6df-wL-bDb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -1201,6 +1202,62 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
             </objects>
             <point key="canvasLocation" x="8878.6259541984728" y="-2.1126760563380285"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="uMV-JW-opd">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="W5k-uP-rUg" customClass="PageViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QO8-jw-GL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="-696"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="G9X-c9-YXA">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="P1f-e0-Req" customClass="ContentViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="drr-BT-xV8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="много текста" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-P2-UPC">
+                                <rect key="frame" x="16" y="185" width="361" height="38"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖐️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJu-Ky-60r">
+                                <rect key="frame" x="142.66666666666666" y="366" width="108" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-vL-m8G">
+                                <rect key="frame" x="138.66666666666666" y="792" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemRedColor"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wsk-o0-2Ud"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eJu-Ky-60r" firstAttribute="centerY" secondItem="drr-BT-xV8" secondAttribute="centerY" id="AJy-2I-RkJ"/>
+                            <constraint firstItem="Q7g-P2-UPC" firstAttribute="leading" secondItem="wsk-o0-2Ud" secondAttribute="leading" constant="16" id="Jhz-ij-ANB"/>
+                            <constraint firstItem="nqe-vL-m8G" firstAttribute="bottom" secondItem="wsk-o0-2Ud" secondAttribute="bottom" id="SFC-mh-GQL"/>
+                            <constraint firstItem="eJu-Ky-60r" firstAttribute="centerX" secondItem="drr-BT-xV8" secondAttribute="centerX" id="f5C-kx-iVm"/>
+                            <constraint firstItem="wsk-o0-2Ud" firstAttribute="trailing" secondItem="Q7g-P2-UPC" secondAttribute="trailing" constant="16" id="mC7-hO-EuJ"/>
+                            <constraint firstItem="nqe-vL-m8G" firstAttribute="centerX" secondItem="drr-BT-xV8" secondAttribute="centerX" id="sl6-Ev-x9o"/>
+                            <constraint firstItem="Q7g-P2-UPC" firstAttribute="top" secondItem="wsk-o0-2Ud" secondAttribute="top" constant="126" id="xLf-7Z-RVi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="eJu-Ky-60r" id="cqH-Lx-dv7"/>
+                        <outlet property="pageControl" destination="nqe-vL-m8G" id="kUe-vn-1g3"/>
+                        <outlet property="presentTextLabel" destination="Q7g-P2-UPC" id="YYo-RQ-okl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dna-mD-qhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856" y="-696"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fs4-kM-shg"/>
@@ -1223,6 +1280,9 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

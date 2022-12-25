@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var button: UIButton!
     
     @IBOutlet var actionButtons: [UIButton]!
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         button.backgroundColor = .red
         
     }
-
+    
     @IBAction func pressedButton(_ sender: UIButton) {
         
         label.isHidden = false
@@ -55,5 +55,23 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        startPresentation()
+    }
+    
+    func startPresentation() {
+        
+        let userDefoults = UserDefaults.standard
+        let presentationWasViewed = userDefoults.bool(forKey: "presentationWasViewd")
+        
+        if presentationWasViewed == false {
+            if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController {
+                
+                present(pageViewController, animated: true)
+            }
+        }
+    }
 }
 
