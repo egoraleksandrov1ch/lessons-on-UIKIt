@@ -1132,6 +1132,9 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title=" next"/>
+                                <connections>
+                                    <segue destination="JjZ-9q-A9M" kind="show" id="neC-sG-fes"/>
+                                </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UL4-Pv-Zfd">
                                 <rect key="frame" x="0.0" y="145" width="393" height="707"/>
@@ -1201,6 +1204,54 @@ It’s your application’s responsibility to dismiss the keyboard at the time o
                 <exit id="aSv-oF-529" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8878.6259541984728" y="-2.1126760563380285"/>
+        </scene>
+        <!--Seven View Controller-->
+        <scene sceneID="fbo-Bb-vL9">
+            <objects>
+                <viewController id="JjZ-9q-A9M" customClass="SevenViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dr7-oP-1ib">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjy-Bb-B1G">
+                                <rect key="frame" x="16" y="59" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9WG-m6-Uc2"/>
+                                    <constraint firstAttribute="height" constant="35" id="g8o-1p-6ag"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="back"/>
+                                <connections>
+                                    <segue destination="AUc-K5-b2A" kind="unwind" unwindAction="unwindSegueToSixthVCWithSegue:" id="Cwg-4J-nLy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uy-k2-tka">
+                                <rect key="frame" x="166" y="411.33333333333331" width="61.333333333333343" height="29.333333333333314"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="loh-X9-YB9"/>
+                        <color key="backgroundColor" red="0.85502533410000003" green="0.86078917980000003" blue="0.69064244669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="loh-X9-YB9" firstAttribute="trailing" secondItem="qjy-Bb-B1G" secondAttribute="trailing" constant="277" id="E6F-Lu-DXW"/>
+                            <constraint firstItem="6Uy-k2-tka" firstAttribute="centerX" secondItem="dr7-oP-1ib" secondAttribute="centerX" id="R6X-FZ-nga"/>
+                            <constraint firstItem="qjy-Bb-B1G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="loh-X9-YB9" secondAttribute="leading" id="RKe-2R-wmU"/>
+                            <constraint firstItem="qjy-Bb-B1G" firstAttribute="top" secondItem="loh-X9-YB9" secondAttribute="top" id="rMY-Qn-8Cl"/>
+                            <constraint firstItem="6Uy-k2-tka" firstAttribute="centerY" secondItem="dr7-oP-1ib" secondAttribute="centerY" id="wYh-fE-taO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ban-gW-aZy"/>
+                    <connections>
+                        <outlet property="label" destination="6Uy-k2-tka" id="7Lv-6s-MuB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goe-Ua-7oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AUc-K5-b2A" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="9749" y="-2"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="uMV-JW-opd">
